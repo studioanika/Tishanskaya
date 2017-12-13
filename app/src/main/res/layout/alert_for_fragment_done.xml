@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_google_signin_btn_text_dark_default"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/alert_for_don.text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="По результатам диагностики, ваши симптомы сходны с симптомами, характерными для панических атак."
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/alert_for_don.btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_auth_2dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="хочу решить проблему"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="16sp" />
+</LinearLayout>

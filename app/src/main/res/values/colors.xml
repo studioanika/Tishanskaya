@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3d214b</color>
+    <color name="colorPrimaryDark">#3d214b</color>
+    <color name="colorAccent">#3d214b</color>
+    <color name="circle_center">#FF4081</color>
+    <color name="trans">#00000000</color>
+    <color name="white">#FFF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="bg_select_disease">#fafafa</color>
+    <color name="bg_sliding_panel">#3F51B5</color>
+    <color name="slider_indicator_no_active">#6e5b78</color>
+    <color name="vk">#507299</color>
+    <color name="fb">#3f5c9a</color>
+    <color name="gm">#dd4d3b</color>
+    <color name="inst">#a83aaa</color>
+    <color name="for_type_pa">#ECCEFB</color>
+    <color name="card_color_active">#efefef</color>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="icons">
+        <item>@drawable/if_home_173033</item>
+        <item>@drawable/if_home_173033</item>
+        <item>@drawable/if_home_173033</item>
+        <item>@drawable/if_home_173033</item>
+        <item>@drawable/if_home_173033</item>
+    </array>
+
+    <array name="colors">
+        <item>@android:color/transparent</item>
+        <item>@android:color/transparent</item>
+        <item>@android:color/transparent</item>
+        <item>@android:color/transparent</item>
+        <item>@android:color/transparent</item>
+    </array>
+
+    <array name="titles">
+        <item>Flash</item>
+        <item>Battery</item>
+        <item>Gps</item>
+        <item>Bluetooth</item>
+        <item>Что нужно</item>
+    </array>
+
+    <array name="titles2">
+        <item>Flash1</item>
+        <item>Battery2</item>
+        <item>Gps22</item>
+        <item>Bluetoot22h</item>
+        <item>Что22 нужно</item>
+    </array>
+
+    <array name="simptoms">
+        <item>Сложно сделать глубокий вдох или выдох.</item>
+        <item>Головокружение, непостоянство ощущений или усталость.</item>
+        <item>Усиление скорости сердечных сокращений (тахикардия).</item>
+        <item>Дрожание или покачивание.</item>
+        <item>Потливость.</item>
+        <item>Удушье.</item>
+        <item>Тошнота или дискамфорт в желудке.</item>
+        <item>Непонимание кто я и где я нахожусь в настоящее время.</item>
+        <item>Онемение или покалывание.</item>
+        <item>Покраснение (отсутствие покраснения лица), гусиная кожа.</item>
+        <item>Боль или дискомфорт в груди.</item>
+        <item>Страх смерти.</item>
+        <item>Страх сойти с ума или сделать что-то не так.</item>
+    </array>
+
+</resources>
