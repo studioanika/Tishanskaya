@@ -2,6 +2,7 @@ package com.example.mobiapp.newtishansjayaapp;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -183,10 +185,45 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void showRatingDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+        alertDialog.setTitle("Пять звезд.");
+        alertDialog.setMessage("Понравилось приложние Поставь пять звезд. Поддержи разработчиков.");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                        }
+                    }
+                });
+        alertDialog.show();
 
+
+    }
     @Override public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            moveTaskToBack(true); return true;
+            Log.e("Main", "review= "+ String.valueOf(prefs.getReview()));
+            if(prefs.getReview() == 3){
+                prefs.setReview(prefs.getReview() + 1);
+                showRatingDialog();
+                return true;
+            }else if(prefs.getReview() == 7 ){
+                prefs.setReview(prefs.getReview() + 1);
+                showRatingDialog();
+                return true;
+            }else if(prefs.getReview() == 12){
+                showRatingDialog();
+                prefs.setReview(prefs.getReview() + 1);
+                return true;
+            }else {
+                prefs.setReview(prefs.getReview() + 1);
+                moveTaskToBack(true);
+            }
+
         } return super.onKeyDown(keyCode, event);
     }
 

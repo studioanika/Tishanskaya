@@ -15,6 +15,7 @@ public class Prefs {
     Context context;
     private static final String APP_PREFERENCES = "config";
     private static final String APP_PREFERENCES_FIRST = "first";
+    private static final String APP_PREFERENCES_REVIEW = "review";
     private static final String APP_PREFERENCES_VAHT = "vaht";
     private static final String APP_PREFERENCES_ROW = "row";
     private static final String APP_PREFERENCES_PRED = "pred";
@@ -88,5 +89,14 @@ public class Prefs {
         SharedPreferences.Editor editor = mSettings.edit();
         editor.putString(APP_PREFERENCES_PRED_CODE, "Победить страх");
         editor.apply();
+    }
+
+    public void setReview(int pred){
+        SharedPreferences.Editor editor = mSettings.edit();
+        editor.putString(APP_PREFERENCES_REVIEW, String.valueOf(pred));
+        editor.apply();
+    }
+    public int getReview(){
+        return Integer.parseInt(mSettings.getString(APP_PREFERENCES_REVIEW,"0"));
     }
 }
